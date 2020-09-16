@@ -1,0 +1,15 @@
+<form [formGroup]="storeUserForm" fxLayout="column" fxLayoutAlign="center center">
+  <mat-form-field class="example-full-width">
+    <input matInput type="email" placeholder="Email ID" formControlName="username">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Phone Number" formControlName="mobile_number">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="password" placeholder="Password" formControlName="password">
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" color="primary" (click)="addUser()">Add/Update User</button>
+</form>

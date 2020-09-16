@@ -1,0 +1,35 @@
+<div fxLayout="column" fxLayoutAlign="space-around center" >
+  <mat-card>
+    <form fxLayout="column" (ngSubmit)="register()" [formGroup]="registerForm">
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Username" formControlName="username">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input type="password" matInput placeholder="Password" formControlName="password">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Shop Code" formControlName="code">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input type="tel" matInput placeholder="Phone Number" formControlName="phone_number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Address" formControlName="address"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input type="url" matInput placeholder="Website Url" formControlName="website">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">Register</button>
+      {{ message }}
+    </form>
+  </mat-card>
+</div>

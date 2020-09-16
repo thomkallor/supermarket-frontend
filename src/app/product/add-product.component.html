@@ -1,0 +1,66 @@
+<h1 mat-dialog-title>Add Product</h1>
+<div mat-dialog-content fxLayout="column" fxLayoutAlign="space-around center" style="min-width: 100%; min-height: 100%;">
+  <form (ngSubmit)="addProduct()" [formGroup]="addProductForm">
+    <div fxLayout="row">
+      <mat-form-field fxFlex="50">
+        <input matInput formControlName="name" placeholder="Name of the Item">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Category" formControlName="category" required>
+          <mat-option value="Beverages">Beverages</mat-option>
+          <mat-option value="Bread/Bakery">Bread/Bakery</mat-option>
+          <mat-option value="Canned/Jarred Goods">Canned/Jarred Goods</mat-option>
+          <mat-option value="Dairy">Dairy</mat-option>
+          <mat-option value="Dry/Baking Goods">Dry/Baking Goods</mat-option>
+          <mat-option value="Frozen Foods">Frozen Foods</mat-option>
+          <mat-option value="Meat">Meat</mat-option>
+          <mat-option value="Produce">Produce</mat-option>
+          <mat-option value="Cleaners">Cleaners</mat-option>
+          <mat-option value="Paper Goods">Paper Goods</mat-option>
+          <mat-option value="Personal Care">Personal Care</mat-option>
+          <mat-option value="Other">Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50">
+        <input matInput formControlName="alias_name" placeholder="Alias Name">
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row">
+      <mat-form-field fxFlex="50">
+        <input type="number" matInput formControlName="price" placeholder="Price Bought For">
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50">
+        <input matInput formControlName="selling" type="number" placeholder="Price selling">
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row">
+      <mat-form-field fxFlex="50">
+        <input matInput formControlName="state_gst_tax" type="number" placeholder="State GST %">
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50">
+        <input matInput formControlName="central_gst_tax" type="number" placeholder="Central GST %">
+      </mat-form-field>
+    </div>
+    
+    <div fxLayout="row">
+      <mat-form-field fxFlex="50">
+        <input matInput formControlName="stock" type="number" placeholder="Stock">
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50">
+          <input type="number" matInput formControlName="mrp" placeholder="MRP">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
+      <button type="submit" mat-raised-button color="primary" cdkFocusInitial>ADD</button>
+    </div>
+  </form>
+</div>

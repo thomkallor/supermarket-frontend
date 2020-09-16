@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+
+$aimploy-primary: mat-palette($mat-green, 600, 50);
+$aimploy-accent:  mat-palette($mat-green, A200, A100, A400);
+$aimploy-warn:    mat-palette($mat-orange);
+$aimploy-theme:   mat-light-theme($aimploy-primary, $aimploy-accent, $aimploy-warn);
+
+@include angular-material-theme($aimploy-theme);
+
+.mat-primary-background {
+    background-color: mat-color($aimploy-primary);
+}
+
+.mat-accent-background {
+    background-color: mat-color($aimploy-accent);
+}
+
+.mat-warn-background {
+    background-color: mat-color($aimploy-warn);
+}

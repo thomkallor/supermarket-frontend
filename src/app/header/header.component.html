@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-around center">
+  <div>
+    TRUEMARKET
+  </div>
+  <div>
+    <button mat-button [routerLink]="['/', 'billing']">BILLING</button>
+    <button mat-button [routerLink]="['/', 'product']">PRODUCTS</button>
+
+    <button mat-button [routerLink]="['/', 'user']">ADD USERS</button>
+    <button mat-button [routerLink]= "['/', 'dashboard']">DASHBOARD</button>
+
+    <!-- <button mat-button>ONLINE ORDER</button> -->
+  </div>
+  <div>
+    <button mat-button (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>
